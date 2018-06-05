@@ -1,20 +1,29 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var graphqlHTTP = require('express-graphql');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const graphqlHTTP = require('express-graphql');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 
-const extensions = ({ document, variables, operationName, result, context }) => {
-  return {
-    runTime: Date.now() - context.startTime
+const graphQLSchema = require('./schema/index.js');
+
+const extensions = (options) => {
+  console.log( Object.keys(options) );
+  console.log( options );
+  const { document, variables, operationName, result, context } = options;
+  if (context) {
+    return {
+      runTime: Date.now() - context.startTime
+    }
+  }else{
+    return {}
   }
 }
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,15 +36,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/graphql', graphqlHTTP({
-  schema: MyGraphQLSchema,
+
+  context: { startTime: Date.now() },
+  schema: graphQLSchema,
   graphiql: true,
   extensions,
+
   formatError: error => ({
     message: error.message,
     locations: error.locations,
     stack: error.stack ? error.stack.split('\n') : [],
     path: error.path
   })
+
 }));
 
 app.use('/', indexRouter);
