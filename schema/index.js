@@ -78,8 +78,8 @@ const sections = [
   { id: 11, dashboardId: 4, title: 'CPU Temperature', text:'Average temperature of all CPUs.'},
   { id: 12, dashboardId: 4, title: 'Launchpad is Cool', text:''},
 
-  { id: 13, dashboardId: 5, title: 'Introduction to GraphQL', text:''},
-  { id: 14, dashboardId: 5, title: 'Welcome to Meteor', text:''},
+  { id: 13, dashboardId: 5, title: 'Conversion Rate', text:'Overview of current month'},
+  { id: 14, dashboardId: 5, title: 'Recent Activities', text:'Overview of current week\'s activities.'},
   { id: 15, dashboardId: 5, title: 'Advanced GraphQL', text:''},
 
   { id: 16, dashboardId: 6, title: 'Launchpad is Cool', text:''},
@@ -100,24 +100,31 @@ const sections = [
 ];
 
 // Think of this as a database table of rows.
-const dashboards = [
-  { id: 1, pageId:1, title: 'Classic Dashboard'},
-  { id: 2, pageId:1, title: 'Analytical Dashboard'},
-  { id: 3, pageId:1, title: 'Commerce Dashboard'},
-  { id: 4, pageId:1, title: 'Cryptocurrency Dashboard'},
-  { id: 5, pageId:1, title: 'General Dashboard'},
-  { id: 6, pageId:1, title: 'Sales Dashboard'},
-  { id: 7, pageId:1, title: 'Campaign Dashboard'},
-  { id: 8, pageId:1, title: 'Trendy Dashboard'},
-  { id: 9, pageId:1, title: 'Overview Dashboard'},
+const pages = [
+
+  { id:  1, categoryId:1, title: 'Classic Dashboard' },
+  { id:  2, categoryId:1, title: 'Analytical Dashboard' },
+  { id:  3, categoryId:1, title: 'Commerce Dashboard' },
+  { id:  4, categoryId:1, title: 'Cryptocurrency Dashboard' },
+  { id:  5, categoryId:1, title: 'General Dashboard' },
+  { id:  6, categoryId:1, title: 'Sales Dashboard' },
+  { id:  7, categoryId:1, title: 'Campaign Dashboard' },
+  { id:  8, categoryId:1, title: 'Trendy Dashboard' },
+  { id:  9, categoryId:1, title: 'Overview Dashboard' },
+  { id: 10, categoryId:2, title: 'Interface Cards' },
+  { id: 11, categoryId:3, title: 'Card Blocks' },
+  { id: 11, categoryId:4, title: 'Icon Fonts' },
+  { id: 11, categoryId:5, title: 'Typography' },
+
+
 ];
 
-const pages = [
+const categories = [
   { id: 1, title: 'Dashboards'},
-  { id: 2, title: 'Cards'},
-  { id: 3, title: 'Blocks'},
-  { id: 3, title: 'Icons'},
-  { id: 3, title: 'Fonts'},
+  { id: 2, title: 'Interface Cards'},
+  { id: 3, title: 'Card Blocks'},
+  { id: 4, title: 'Icon Fonts'},
+  { id: 5, title: 'Typography'},
 ];
 
 const resolvers = {
