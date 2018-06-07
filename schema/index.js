@@ -75,28 +75,28 @@ const sections = [
   { id: 9,  dashboardId: 3, title: 'Recent Chats', text:'Overview of today\'s conversations.'},
 
   { id: 10, dashboardId: 4, title: 'Network Analysis', text:'Download vs. Upload Speed'},
-  { id: 11, dashboardId: 4, title: 'CPU Temperature', text:'Average temperature of all CPUs.'},
+  { id: 11, dashboardId: 4, title: 'CPU Temperature', text:'Average temperature of all CPUs'},
   { id: 12, dashboardId: 4, title: 'Launchpad is Cool', text:''},
 
   { id: 13, dashboardId: 5, title: 'Conversion Rate', text:'Overview of current month'},
-  { id: 14, dashboardId: 5, title: 'Recent Activities', text:'Overview of current week\'s activities.'},
-  { id: 15, dashboardId: 5, title: 'Advanced GraphQL', text:''},
+  { id: 14, dashboardId: 5, title: 'Recent Activities', text:'Overview of current week\'s activities'},
+  { id: 15, dashboardId: 5, title: 'Sales Ratio', text:'Overview of current month'},
 
-  { id: 16, dashboardId: 6, title: 'Launchpad is Cool', text:''},
-  { id: 17, dashboardId: 6, title: 'Launchpad is Cool', text:''},
-  { id: 18, dashboardId: 6, title: 'Launchpad is Cool', text:''},
+  { id: 16, dashboardId: 6, title: 'Order Status', text:'Overview of open orders'},
+  { id: 17, dashboardId: 6, title: 'Members Online', text:'Most recent first'},
+  { id: 18, dashboardId: 6, title: 'Network Traffic', text:'Visits vs. Unique'},
 
-  { id: 19, dashboardId: 7, title: 'Introduction to GraphQL', text:''},
-  { id: 20, dashboardId: 7, title: 'Welcome to Meteor', text:''},
-  { id: 21, dashboardId: 7, title: 'Advanced GraphQL', text:''},
+  { id: 19, dashboardId: 7, title: 'Traffic and Sales', text:'Business Intelligence Overview'},
+  { id: 20, dashboardId: 7, title: 'Yearly Sales Report', text:'Current Year Overview'},
+  { id: 21, dashboardId: 7, title: 'Latest Projects', text:'Projects published within last few moments'},
 
-  { id: 22, dashboardId: 8, title: 'Launchpad is Cool', text:''},
-  { id: 23, dashboardId: 8, title: 'Introduction to GraphQL', text:''},
-  { id: 24, dashboardId: 8, title: 'Welcome to Meteor', text:''},
+  { id: 22, dashboardId: 8, title: 'Account Overview', text:'Profile and Avatar'},
+  { id: 23, dashboardId: 8, title: 'Sales Analytics', text:'Daily Sales'},
+  { id: 24, dashboardId: 8, title: 'Sales Overview', text:'Last 24 Hours'},
 
-  { id: 25, dashboardId: 9, title: 'Advanced GraphQL', text:''},
-  { id: 26, dashboardId: 9, title: 'Launchpad is Cool', text:''},
-  { id: 27, dashboardId: 9, title: 'Introduction to GraphQL', text:''},
+  { id: 25, dashboardId: 9, title: 'User Management', text:'Newest Users First'},
+  { id: 26, dashboardId: 9, title: 'Traffic Sources', text:'Overview by country'},
+  { id: 27, dashboardId: 9, title: 'Orders Overview', text:'Average order value'},
 ];
 
 // Think of this as a database table of rows.
@@ -111,6 +111,7 @@ const pages = [
   { id:  7, categoryId:1, title: 'Campaign Dashboard' },
   { id:  8, categoryId:1, title: 'Trendy Dashboard' },
   { id:  9, categoryId:1, title: 'Overview Dashboard' },
+
   { id: 10, categoryId:2, title: 'Interface Cards' },
   { id: 11, categoryId:3, title: 'Card Blocks' },
   { id: 11, categoryId:4, title: 'Icon Fonts' },
