@@ -13,7 +13,7 @@
     "graphql-tools": "^4.0.5",
     "hbs": "^4.0.4",
     "http-errors": "~1.7.3",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.15",
     "morgan": "~1.9.1"
   },
   "description": "GraphQL Dashboard Data Server",
