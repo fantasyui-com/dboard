@@ -2,7 +2,8 @@
   "name": "dboard",
   "version": "1.17.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -23,7 +24,7 @@
     "url": "git+https://github.com/fantasyui-com/dboard.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "fantasyui.com <fantasyui.com@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fantasyui-com/dboard/issues"
