@@ -1,6 +1,6 @@
 {
   "name": "dboard",
-  "version": "1.36.0",
+  "version": "1.37.0",
   "scripts": {
     "start": "node ./bin/www",
     "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;"
